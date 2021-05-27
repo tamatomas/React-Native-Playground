@@ -26,7 +26,7 @@ export const Colors: ColorsType = {
     rgb: 'rgb(90, 114, 218)',
     rgba: opacity => rgbToRgba(Colors.SECONDARY.rgb, opacity),
   },
-  GREEN_1: {
+  GREEN: {
     hex: '#099175',
     rgb: 'rgb(9, 145, 117)',
     rgba: opacity => rgbToRgba(Colors.GREEN_1.rgb, opacity),
@@ -34,6 +34,16 @@ export const Colors: ColorsType = {
   WHITE: {
     hex: '#fff',
     rgb: 'rgb(255, 255, 255)',
+    rgba: opacity => rgbToRgba(Colors.BCKG.rgb, opacity),
+  },
+  GREY_LIGHT: {
+    hex: '#EBECF0',
+    rgb: 'rgb(235, 236, 240)',
+    rgba: opacity => rgbToRgba(Colors.BCKG.rgb, opacity),
+  },
+  GREY_DARK: {
+    hex: '#DADBE2',
+    rgb: 'rgb(218, 219, 226)',
     rgba: opacity => rgbToRgba(Colors.BCKG.rgb, opacity),
   },
 };

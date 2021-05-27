@@ -17,7 +17,7 @@ type Props = {
   onPress: () => void;
   btnStyle?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
-  icon?: boolean;
+  showIcon?: boolean;
   iconProps?: CustomIconProps;
   iconPosition?: 'left' | 'right';
 };
@@ -25,11 +25,11 @@ type Props = {
 export const Button = (props: Props) => {
   return (
     <Pressable style={[styles.btn, props.btnStyle]} onPress={props.onPress}>
-      {props.icon && props.iconPosition === 'left' && (
+      {props.showIcon && props.iconPosition === 'left' && (
         <Icon {...props.iconProps!} />
       )}
       <Text style={[styles.label, props.labelStyle]}>{props.label}</Text>
-      {props.icon && props.iconPosition === 'right' && (
+      {props.showIcon && props.iconPosition === 'right' && (
         <Icon {...props.iconProps!} />
       )}
     </Pressable>
@@ -42,11 +42,15 @@ const styles = StyleSheet.create({
     height: BTN_HEIGHT,
     borderRadius: PADDING,
     backgroundColor: Colors.PRIMARY.hex,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: PADDING,
   },
   label: {
     color: Colors.WHITE.hex,
     fontFamily: 'Poppins-Medium',
+    marginHorizontal: PADDING / 2,
+    marginTop: PADDING / 4,
   },
 });

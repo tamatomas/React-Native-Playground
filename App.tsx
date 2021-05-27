@@ -1,12 +1,12 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {RootStack} from './src';
+import {RootDrawer} from './src';
 import 'react-native-gesture-handler';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.view}>
-      <RootStack />
+      <RootDrawer />
     </SafeAreaView>
   );
 };
